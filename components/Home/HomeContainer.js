@@ -27,13 +27,13 @@ class HomeContainer extends Component {
 
 const mapStateToProps = state => {
   return {
-    pickupLocation: state.home.pickupLocation,
-    dropoffLocation: state.home.dropoffLocation,
-    routeInfo: state.home.routeInfo,
-    fare: state.home.fare,
-    carType: state.home.carType,
-    towTruckType: state.home.towTruckType,
-    nearbyDrivers: state.home.nearbyDrivers
+    pickupLocation: state.towBooking.pickupLocation,
+    dropoffLocation: state.towBooking.dropoffLocation,
+    routeInfo: state.towBooking.routeInfo,
+    fare: state.towBooking.fare,
+    carType: state.towBooking.carType,
+    towTruckType: state.towBooking.towTruckType,
+    currentLocation: state.home.currentLocation
   };
 };
 
