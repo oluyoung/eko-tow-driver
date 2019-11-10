@@ -5,7 +5,7 @@ import MapView from 'react-native-maps';
 import { View } from 'react-native';
 import styles from './styles';
 
-import { getCurrentLocation, getNearbyDrivers } from '../../../store/actions';
+import { getCurrentLocation } from '../../../store/actions';
 
 class MapContainer extends Component {
   state = {
@@ -30,7 +30,7 @@ class MapContainer extends Component {
   }
 
   render() {
-    const pickupRegionExists = Boolean(this.props.pickupRegion.latitude && this.props.pickupRegion.longitude);
+    const pickupRegionExists = Boolean(this.props.pickupRegion);
     const pickupMarker = pickupRegionExists ?
       <MapView.Marker coordinate={this.props.pickupRegion} pinColor='red' /> :
         null;
@@ -39,7 +39,7 @@ class MapContainer extends Component {
       this.centerToLocation(this.props.pickupRegion);
     }
 
-    const dropoffRegionExists = Boolean(this.props.dropoffRegion.latitude && this.props.dropoffRegion.longitude && pickupRegionExists);
+    const dropoffRegionExists = Boolean(this.props.dropoffRegion && pickupRegionExists);
     const dropoffMarker = dropoffRegionExists ?
       <MapView.Marker coordinate={this.props.dropoffRegion} pinColor='green' /> :
         null;
@@ -60,15 +60,7 @@ class MapContainer extends Component {
         ref={(map) => {this.map = map}}
         style={styles.map}>
         {pickupMarker}
-        {
-          pickupRegionExists && this.props.nearbyDrivers.map((driverLocation, idx) => {
-            const coordinate = {
-              latitude: driverLocation.coordinate[1],
-              longitude: driverLocation.coordinate[0]
-            };
-            return (<MapView.Marker key={idx} coordinate={coordinate} pinColor='yellow' />);
-          })
-        }
+
         {dropoffMarker}
       </MapView>
     );

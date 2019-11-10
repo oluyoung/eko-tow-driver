@@ -7,7 +7,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 
-import AppNavigator from './navigation/AppNavigator';
+import AppNavigator from './src/navigation/AppNavigator';
 
 import rootReducer from './src/store/rootReducer';
 

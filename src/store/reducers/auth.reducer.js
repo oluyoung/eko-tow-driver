@@ -8,7 +8,7 @@ const initState = {
   },
   currentUser: {
     username: 'eman',
-    id: '5d7d8305127604647eafb25e'
+    id: '5d7d8305127604647eafb25e',
     phoneNumber: '+23480735767122'
   }
 };

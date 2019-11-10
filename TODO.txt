@@ -1,0 +1,18 @@
+-toggle online or offline
+  -send to backend as isOnline: true/false
+-get driver id from auth
+-filter with id from incoming tow requests
+-add to towRequests
+-if towRequest icon clicked
+  -redirect to towRequests page
+-onAccept tow request
+  -set currentTowRequest, set driverId as auth.id
+  -start map nav to user pickup
+  -onStartTrip
+    -start map nav to destination
+    -update towRequest
+-make towRequests page: completed, requests,
+  -display towRequests from store
+  -accept, ignore (swipe to ignore)
+-make earnings page
+-show current request

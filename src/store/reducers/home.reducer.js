@@ -1,4 +1,4 @@
-import ACTION_HANDLERS from '../handlers/homeHandler';
+import ACTION_HANDLERS from '../handlers/home.handler';
 
 const deltas = {
   latitudeDelta: 0.0,
@@ -8,7 +8,8 @@ const deltas = {
 export const initState = {
   currentLocation: {
     ...deltas
-  }
+  },
+  isOnline: false
 };
 
 const homeReducer = (state = initState, action) => {

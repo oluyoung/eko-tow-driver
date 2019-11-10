@@ -4,3 +4,6 @@ export const LOGIN = 'LOGIN';
 export const SIGNUP = 'SIGNUP';
 
 export const SET_USER = 'SET_USER';
+
+// HOME
+export const GET_CURRENT_LOCATION = 'GET_CURRENT_LOCATION';
