@@ -22,17 +22,11 @@ class HomeContainer extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    currentTowBooking: state.towBookings.currentTowBooking,
-    currentLocation: state.home.currentLocation
-  };
-};
+const mapStateToProps = state => ({
+  currentTowBooking: state.towBookings.currentTowBooking,
+  currentLocation: state.home.currentLocation
+});
 
-const mapDispatchToProps = dispatch => {
-  return {
-    
-  };
-};
+const mapDispatchToProps = dispatch => ({});
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer);

@@ -7,7 +7,9 @@ const deltas = {
 
 export const initState = {
   currentLocation: {
-    ...deltas
+    ...deltas,
+    latitude: 6.557716,
+    longitude: 3.384178
   },
   isOnline: false
 };
